@@ -22,9 +22,5 @@ jobs:
       - name: Push Image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/flask-app:latest
 
-      - name: Remove Old Container
-        run: docker rm -f flask_container || true
 
-      - name: Run New Container
-        run: docker run -d -p 5000:5000 --name flask_container ${{ secrets.DOCKER_USERNAME }}/flask-app:latest
 
