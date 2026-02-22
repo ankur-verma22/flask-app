@@ -10,7 +10,7 @@ APP_VERSION = os.environ.get("APP_VERSION", "1.0")
 @app.route("/")
 def home():
     return jsonify({
-        "message": "Welcome to Production test Flask App ankur 🚀",
+        "message": "Welcome to Production test Flask App testing 🚀",
         "version": APP_VERSION,
         "hostname": socket.gethostname(),
         "timestamp": datetime.datetime.utcnow().isoformat()
